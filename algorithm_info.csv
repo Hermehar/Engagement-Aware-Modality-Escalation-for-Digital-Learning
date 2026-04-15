@@ -1,0 +1,189 @@
+Title,Description,Steps,Code Example,Time Complexity (Worst),Space Complexity
+Bubble Sort,"Bubble Sort repeatedly compares adjacent elements and swaps them if they are out of order. The process continues until no swaps are required, which means the list is sorted. It is often used as an introductory algorithm due to its simplicity, though it is inefficient for large datasets. It is one of the simplest sorting techniques. The term “bubble sort” was introduced by Iverson in
+1962. Earlier, bubble sort was known as “Sorting by Exchange” and then by the name of “Exchange Sorting”.Bubble sort compares an element with its adjacent elements and swaps the
+elements if necessary. This process repeats till until no more swapping is possible.","Let us consider an array with N elements stored in it. The data available at each location of an array is
+represented with INFORMATION.
+STEP 1: Start
+STEP 2: Repeat the steps 3 and 4 for K = 1 till K = N-1
+STEP 3: Set POINTER: = 1
+STEP 4: Repeat while POINTER<= N-K:
+If INFORMATION [POINTER] > INFORMATION [POINTER +1] then interchange
+INFORMATION [POINTER] & INFORMATION [POINTER +1][end of if statement]
+[end of loop started at step 4]
+Set POINTER: = POINTER +1
+[end of loop started at step 2]
+STEP 5: Exit","bubbleSort(array)
+  for i <- 1 to sizeOfArray - 1
+    for j <- 1 to sizeOfArray - 1 - i
+      if leftElement > rightElement
+        swap leftElement and rightElement
+end bubbleSort",O(n^2),O(1)
+Selection Sort Algorithm,"Selection Sort repeatedly finds the minimum element from the unsorted portion of the array and places it at the beginning. It reduces the array into a sorted and an unsorted section, expanding the sorted section one element at a time.","Set the first element as minimum.
+
+                
+Select first element as minimum
+Compare minimum with the second element. If the second element is smaller than minimum, assign the second element as minimum.
+
+                Compare minimum with the third element. Again, if the third element is smaller, then assign minimum to the third element otherwise do nothing. The process goes on until the last element.
+                
+Compare minimum with the remaining elements
+After each iteration, minimum is placed in the front of the unsorted list.
+                
+Swap the first with minimum
+For each iteration, indexing starts from the first unsorted element. Step 1 to 3 are repeated until all the elements are placed at their correct positions.
+                
+The first iteration
+
+
+The second iteration
+
+
+The third iteration
+
+
+The fourth iteration","selectionSort(array, size)
+  for i from 0 to size - 1 do
+    set i as the index of the current minimum
+    for j from i + 1 to size - 1 do
+      if array[j] < array[current minimum]
+        set j as the new current minimum index
+    if current minimum is not i
+      swap array[i] with array[current minimum]
+end selectionSort",O(n^2),O(1)
+Insertion Sort Algorithm,"nsertion sort is the simplest sorting algorithm. In insertion sort, the final array or list is built, by comparing one item at a time. Working of Insertion Sort: In insertion sort, sorting is done by repeatedly taking the next item and inserting it into the final data by comparing it with the already existing data items.","Let us suppose an array A with N elements. Point is the variable, which stores the address of the current data element. STEP 1: Start
+STEP 2: Set A[0]:= - INFINITE
+STEP 3: Repeat steps 3 to 5 for K: = 2, 3, …. N
+STEP 4: Set TEMP: =A[K] & POINT: =K - 1
+STEP 5: Repeat while TEMP<A[POINT]
+Set A[POINT+1]: = A[POINT]
+Set POINT: = POINT – 1
+[end of loop]
+STEP 6: Set A[POINT+1]: = TEMP
+[end of step 3 loop]
+STEP 7: Exit","insertionSort(array)
+  mark first element as sorted
+  for each unsorted element X
+    'extract' the element X
+    for j <- lastSortedIndex down to 0
+      if current element j > X
+        move sorted element to the right by 1
+    break loop and insert X here
+end insertionSort",O(n^2),O(1)
+Merge Sort Algorithm,"Merge sort was developed by John Von Newmann in 1945. Merge sorting is similar to Quick sort as
+it also works on the principle of divide and conquer. Merge sort is an efficient comparison-based sorting algorithm.
+Working of Merge Sort: In merge sort, the given data set is divided into two equal halves. Merge sorting
+uses the concepts of swapping of the data elements (if necessary) to sort the elements. Merge sorting requires
+sequential access rather than random access, due to which it can easily be applied on the lists and the arrays.","In Merge sort, the list is firstly divided into two equal halves. The list keeps on dividing till
+the time, only one element is left in a set. This step is known as Divide. Once, the stage where a set consisting of one
+element is reached, then the elements start merging with each other in the same manner as they were divided, but in
+ascending or descending order depending upon the condition provided. This step is known as Conquer.","MergeSort(A, p, r):
+    if p > r 
+        return
+    q = (p+r)/2
+    mergeSort(A, p, q)
+    mergeSort(A, q+1, r)
+    merge(A, p, q, r)",,
+Quicksort Algorithm,"Quick sort was developed by Sir Charles Antony Richard Hoare. Quick Sort is also known as thedivide and conquer algorithm or partition exchange sort. The given list of items is firstly divided into two halves by choosing the pivotelement. The pivot element divides the list in such a way, that on one side of the pivot element, all the elements aresmaller and on the other side, all the elements are greater than the pivot element .","Let us consider an array A with N elements. The parameters BEGIN and END contain the boundary
+values of sub list A, to which this algorithm is applied. LOCATION keeps track of the position of the
+first element A[BEGIN] of the sub list during the procedure. The local variables LEFT and RIGHT
+will contain the boundary values of the unscanned elements.
+STEP 1: Start
+STEP 2: Set LEFT: = BEGIN and RIGHT: = END
+STEP 3: Repeat while A[LOCATION] <= A[RIGHT] and LOCATION! = RIGHT:
+Set RIGHT: = RIGHT – 1
+[end of loop]
+If LOCATION = RIGHT
+Then Return
+[end of if statement]
+If A[LOCATION] > A[RIGHT],
+TEMP: = A[LOCATION]
+A[LOCATION]: = A[RIGHT]
+A[RIGHT]: = TEMP
+Set LOCATION: = RIGHT
+Go to step 4
+[end of if statement]
+STEP 4: Repeat while A[LOCATION] >= A[LEFT] and LOCATION! = LEFT:
+Set LEFT: = LEFT +1
+[end of loop]
+If LOCATION = LEFT
+Then Return
+[end of if statement]
+If A[LEFT] > A[LOCATION], then
+TEMP: = A[LOCATION]
+A[LOCATION]: = A[LEFT]
+A[LEFT]: = TEMP
+Set LOCATION: = LEFT
+Go to step 3
+[end of if statement]
+STEP 5: Exit","quickSort(array, leftmostIndex, rightmostIndex)
+  if (leftmostIndex < rightmostIndex)
+    pivotIndex <- partition(array,leftmostIndex, rightmostIndex)
+    quickSort(array, leftmostIndex, pivotIndex - 1)
+    quickSort(array, pivotIndex, rightmostIndex)
+
+partition(array, leftmostIndex, rightmostIndex)
+  set rightmostIndex as pivotIndex
+  storeIndex <- leftmostIndex - 1
+  for i <- leftmostIndex + 1 to rightmostIndex
+  if element[i] < pivotElement
+    swap element[i] and element[storeIndex]
+    storeIndex++
+  swap pivotElement and element[storeIndex+1]
+return storeIndex + 1",O(n^2),O(log n)
+Heap Sort Algorithm,Heap Sort is a popular and efficient sorting algorithm in computer programming. Learning how to write the heap sort algorithm requires knowledge of two types of data structures - arrays and trees.,"Since the tree satisfies Max-Heap property, then the largest item is stored at the root node.
+Swap: Remove the root element and put at the end of the array (nth position) Put the last item of the tree (heap) at the vacant place.
+Remove: Reduce the size of the heap by 1.
+Heapify: Heapify the root element again so that we have the highest element at root.
+The process is repeated until all the items of the list are sorted.","Left child of 1 (index 0)
+= element in (2*0+1) index 
+= element in 1 index 
+= 12
+
+
+Right child of 1
+= element in (2*0+2) index
+= element in 2 index 
+= 9
+
+Similarly,
+Left child of 12 (index 1)
+= element in (2*1+1) index
+= element in 3 index
+= 5
+
+Right child of 12
+= element in (2*1+2) index
+= element in 4 index
+= 6",O(n log n),O(1)
+Radix Sort Algorithm,"Radix sort is a sorting algorithm that sorts the elements by first grouping the individual digits of the same place value. Then, sort the elements according to their increasing/decreasing order.","Find the largest element in the array, i.e. max. Let X be the number of digits in max. X is calculated because we have to go through all the significant places of all elements.
+
+		In this array [121, 432, 564, 23, 1, 45, 788], we have the largest number 788. It has 3 digits. Therefore, the loop should go up to hundreds place (3 times).
+Now, go through each significant place one by one.
+
+		Use any stable sorting technique to sort the digits at each significant place. We have used counting sort for this.
+
+		Sort the elements based on the unit place digits (X=0).
+		
+Using counting sort to sort elements based on unit place
+Now, sort the elements based on digits at tens place.
+		
+Sort elements based on tens place
+Finally, sort the elements based on the digits at hundreds place.
+		
+Sort elements based on hundreds place","radixSort(array)
+  d <- maximum number of digits in the largest element
+  create d buckets of size 0-9
+  for i <- 0 to d
+    sort the elements according to ith place digits using countingSort
+
+countingSort(array, d)
+  max <- find largest element among dth place elements
+  initialize count array with all zeros
+  for j <- 0 to size
+    find the total count of each unique digit in dth place of elements and
+    store the count at jth index in count array
+  for i <- 1 to max
+    find the cumulative sum and store it in count array itself
+  for j <- size down to 1
+    restore the elements to array
+    decrease count of each element restored by 1",O(nk),O(n+k)
