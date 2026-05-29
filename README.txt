@@ -111,13 +111,43 @@ python -m streamlit run app.py
 - `Final_Code.py` offers a more feature-rich interface for algorithm-specific learning.
 - Ensure the model files `best.pt` and `yolov8n.pt` are available in the repository root.
 
-## 📌 Recommended Enhancements
+## � Study Design & Evaluation
+
+This project also reflects a controlled user study comparing two instructional conditions:
+
+- **Adaptive condition**: a dynamic interface escalates instructional modality from text to image to video when disengagement is detected.
+- **Static condition**: a conventional text-only interface delivers identical educational content without modality changes.
+
+### Learning task
+
+- Participants studied seven sorting algorithms: Bubble, Selection, Insertion, Merge, Quick, Heap, and Radix Sort.
+- Each module began with text explanations and steps, with images and videos introduced in the adaptive condition only.
+
+### Engagement inference
+
+- The system captures visual behavioral cues through a webcam and estimates learner engagement in real time.
+- A lightweight YOLOv8n model was fine-tuned on student engagement data to trigger modality escalation.
+- The detection pipeline is used to adapt instruction rather than to evaluate perception accuracy.
+
+### Participants and measures
+
+- 20 university students participated in the study (10 dynamic, 10 static).
+- Measures included NASA-TLX cognitive workload dimensions, user experience questionnaire ratings, and qualitative feedback.
+
+### Key findings
+
+- Adaptive modality escalation reduced mental demand, effort, and frustration compared to static text-only delivery.
+- Participants reported higher engagement, satisfaction, and concentration with the adaptive interface.
+- Adaptive modality changes were generally perceived as helpful rather than distracting.
+- Reported limitations focused on responsiveness and smoother disengagement detection.
+
+##�📌 Recommended Enhancements
 
 - Add more algorithm topics and video resources
 - Improve engagement prediction robustness with additional training data
 - Expand modality escalation logic for adaptive interventions
 - Add user authentication and session logging for classroom evaluation
 
-## 📄 License
+##📄 License
 
 This repository is provided for research and demonstration purposes. Add a license file if you want to publish this on GitHub.
