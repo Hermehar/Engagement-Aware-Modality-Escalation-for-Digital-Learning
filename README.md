@@ -11,7 +11,7 @@ This repository implements an engagement-aware digital learning system that:
 - Uses retrieval-augmented generation (RAG) for contextual answers from educational content.
 - Supports text, image, and video learning modalities for algorithm education.
 
-##✨ Key Features
+## ✨ Key Features
 
 - **Real-time Engagement Monitoring**
   - Person detection with `YOLOv8`
@@ -32,19 +32,17 @@ This repository implements an engagement-aware digital learning system that:
   - PDF text extraction and chunking with `preprocess.py`
   - Generates `chunks.pkl`, `embeddings.npy`, and `faiss.index`
 
-##📁 Repository Structure
+## 📁 Repository Structure
 
-- `app.py` — Main Streamlit application combining live engagement detection and chat assistant
-- `Final_Code.py` — Enhanced Streamlit interface with algorithm selection, content retrieval, and camera management
+- `Final_Code.py` — Main Streamlit interface with algorithm selection, content retrieval, and camera management
 - `preprocess.py` — Preprocessing script for PDF text extraction, embedding generation, and FAISS indexing
 - `algorithm_info.csv` — Algorithm metadata for curated learning content
-- `video_links.csv` — Linked educational video resources
 - `sorting_images/` — Visualization assets for sorting algorithms
 - `chunks.pkl` — Serialized content chunks for retrieval
 - `embeddings.npy` — Saved sentence embeddings
 - `faiss.index` — FAISS vector store index
 - `best.pt` — Custom engagement classifier model
-- `yolov8n.pt`, `yolov5s.pt` — YOLO detection models
+- `yolov8n.pt` — YOLO detection models
 
 ## Interact with the System
 
