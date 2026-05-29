@@ -3,7 +3,7 @@
 
 A multi-modal digital learning assistant that combines real-time engagement detection with intelligent content retrieval and dialogue. This project demonstrates how webcam-based student engagement sensing can be paired with an LLM-powered learning companion to dynamically support learners of sorting algorithms.
 
-🚀 Project Overview
+## 🚀 Project Overview
 
 This repository implements an engagement-aware digital learning system that:
 - Detects student engagement in real time using webcam video and a YOLO-based model pipeline.
@@ -11,7 +11,7 @@ This repository implements an engagement-aware digital learning system that:
 - Uses retrieval-augmented generation (RAG) for contextual answers from educational content.
 - Supports text, image, and video learning modalities for algorithm education.
 
-## ✨ Key Features
+##✨ Key Features
 
 - **Real-time Engagement Monitoring**
   - Person detection with `YOLOv8`
@@ -32,7 +32,7 @@ This repository implements an engagement-aware digital learning system that:
   - PDF text extraction and chunking with `preprocess.py`
   - Generates `chunks.pkl`, `embeddings.npy`, and `faiss.index`
 
-## 📁 Repository Structure
+##📁 Repository Structure
 
 - `app.py` — Main Streamlit application combining live engagement detection and chat assistant
 - `Final_Code.py` — Enhanced Streamlit interface with algorithm selection, content retrieval, and camera management
@@ -46,53 +46,7 @@ This repository implements an engagement-aware digital learning system that:
 - `best.pt` — Custom engagement classifier model
 - `yolov8n.pt`, `yolov5s.pt` — YOLO detection models
 
-## 🔧 Installation
-
-1. Clone this repository:
-   ```bash
-   git clone <your-repo-url>
-   cd HCAI_Project
-   ```
-
-2. Create a virtual environment and activate it:
-   ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate
-   ```
-
-3. Install required Python packages:
-   ```bash
-   pip install streamlit opencv-python av streamlit-webrtc ultralytics sentence-transformers faiss-cpu google-generativeai python-dotenv pymupdf pandas pillow
-   ```
-
-4. Create a `.env` file in the project root and set your Google API key:
-   ```bash
-   echo "GOOGLE_API_KEY=your_api_key_here" > .env
-   ```
-
-## ▶️ Usage
-
-### 1. Preprocess the Educational Content
-
-This step extracts text from the source PDF, creates text chunks, generates embeddings, and builds the FAISS index.
-
-```bash
-python preprocess.py
-```
-
-### 2. Start the Streamlit Application
-
-```bash
-streamlit run app.py
-```
-
-or
-
-```bash
-python -m streamlit run app.py
-```
-
-### 3. Interact with the System
+## Interact with the System
 
 - Allow webcam access for engagement detection
 - Ask questions in the chat panel about algorithm topics
@@ -104,13 +58,6 @@ python -m streamlit run app.py
 - Webcam access for real-time engagement tracking
 - `sorting_algorithms.pdf` present in the repository for preprocessing
 - Google Generative AI API key in `.env`
-
-## 💡 Notes
-
-- The system is designed as a proof-of-concept for engagement-aware digital learning.
-- `app.py` demonstrates the combined webcam + chatbot experience.
-- `Final_Code.py` offers a more feature-rich interface for algorithm-specific learning.
-- Ensure the model files `best.pt` and `yolov8n.pt` are available in the repository root.
 
 ## � Study Design & Evaluation
 
@@ -142,13 +89,9 @@ This project also reflects a controlled user study comparing two instructional c
 - Adaptive modality changes were generally perceived as helpful rather than distracting.
 - Reported limitations focused on responsiveness and smoother disengagement detection.
 
-##�📌 Recommended Enhancements
+## �📌 Recommended Enhancements
 
 - Add more algorithm topics and video resources
 - Improve engagement prediction robustness with additional training data
 - Expand modality escalation logic for adaptive interventions
 - Add user authentication and session logging for classroom evaluation
-
-##📄 License
-
-This repository is provided for research and demonstration purposes. Add a license file if you want to publish this on GitHub.
