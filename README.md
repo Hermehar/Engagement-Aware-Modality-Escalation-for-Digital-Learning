@@ -50,7 +50,7 @@ This repository implements an engagement-aware digital learning system that:
 - Allow webcam access for engagement detection
 - Ask questions in the chat panel about algorithm topics
 - Monitor live engagement scores and modality escalation behavior
-<p align="center"> <img align = "center" width="809" height="172" alt="Screenshot 2026-05-29 at 11 17 07 PM" src="https://github.com/user-attachments/assets/b94512db-641e-46db-b670-9f16c541b204" /></p>
+<p align="center"> <img width="809" height="172" alt="Screenshot 2026-05-29 at 11 17 07 PM" src="https://github.com/user-attachments/assets/b94512db-641e-46db-b670-9f16c541b204" /></p>
 
 
 ## 🧠 Requirements
