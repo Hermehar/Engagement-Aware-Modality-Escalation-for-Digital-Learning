@@ -10,7 +10,7 @@ This repository implements an engagement-aware digital learning system that:
 - Provides a Streamlit chatbot interface powered by Google Gemini (`gemini-2.0-flash`).
 - Uses retrieval-augmented generation (RAG) for contextual answers from educational content.
 - Supports text, image, and video learning modalities for algorithm education.
-<img align = "center" width="683" height="235" alt="Screenshot 2026-05-29 at 11 18 39 PM" src="https://github.com/user-attachments/assets/bc84abc2-aefc-4833-b571-35b9d69b8fe2" />
+<p align="center"> <img width="683" height="235" alt="Screenshot 2026-05-29 at 11 18 39 PM" src="https://github.com/user-attachments/assets/bc84abc2-aefc-4833-b571-35b9d69b8fe2" /></p>
 
 ## ✨ Key Features
 
@@ -50,7 +50,7 @@ This repository implements an engagement-aware digital learning system that:
 - Allow webcam access for engagement detection
 - Ask questions in the chat panel about algorithm topics
 - Monitor live engagement scores and modality escalation behavior
-<img align = "center" width="809" height="172" alt="Screenshot 2026-05-29 at 11 17 07 PM" src="https://github.com/user-attachments/assets/b94512db-641e-46db-b670-9f16c541b204" />
+<p align="center"> <img align = "center" width="809" height="172" alt="Screenshot 2026-05-29 at 11 17 07 PM" src="https://github.com/user-attachments/assets/b94512db-641e-46db-b670-9f16c541b204" /></p>
 
 
 ## 🧠 Requirements
