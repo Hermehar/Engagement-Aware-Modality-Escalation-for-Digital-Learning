@@ -1,8 +1,9 @@
-# Engagement-Aware-Modality-Escalation-for-Digital-Learning
+
+# Engagement Aware Modality Escalation for Digital Learning
 
 A multi-modal digital learning assistant that combines real-time engagement detection with intelligent content retrieval and dialogue. This project demonstrates how webcam-based student engagement sensing can be paired with an LLM-powered learning companion to dynamically support learners of sorting algorithms.
 
-## 🚀 Project Overview
+🚀 Project Overview
 
 This repository implements an engagement-aware digital learning system that:
 - Detects student engagement in real time using webcam video and a YOLO-based model pipeline.
